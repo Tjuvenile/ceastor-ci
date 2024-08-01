@@ -1,0 +1,106 @@
+.pkg: _optional_hooks> python /opt/stack/cinder/.tox/.tox/lib/python3.10/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: get_requires_for_build_editable> python /opt/stack/cinder/.tox/.tox/lib/python3.10/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: build_editable> python /opt/stack/cinder/.tox/.tox/lib/python3.10/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+ROOT: [3805239] KeyboardInterrupt - teardown started
+ROOT: interrupt tox environment: cover
+cover: packaging backend failed (code=interrupted), with SystemExit: interrupted
+/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/develop.py:42: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+warning: no files found matching 'AUTHORS'
+warning: no files found matching 'ChangeLog'
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+Traceback (most recent call last):
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 200, in run_commands
+    dist.run_commands()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+    self.run_command(cmd)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/dist.py", line 976, in run_command
+    super().run_command(command)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/editable_wheel.py", line 146, in run
+    self._ensure_dist_info()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/editable_wheel.py", line 165, in _ensure_dist_info
+    dist_info.run()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/dist_info.py", line 92, in run
+    self.egg_info.run()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 321, in run
+    self.find_sources()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/pbr/packaging.py", line 579, in find_sources
+    mm.run()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 550, in run
+    self.add_defaults()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/pbr/packaging.py", line 555, in add_defaults
+    self.filelist.include_pattern("*", prefix=ei_cmd.egg_info)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/filelist.py", line 232, in include_pattern
+    self.findall()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/filelist.py", line 42, in findall
+    self.allfiles = findall(dir)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/filelist.py", line 309, in findall
+    return list(files)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/filelist.py", line 267, in <genexpr>
+    results = (
+  File "/usr/lib/python3.10/os.py", line 419, in _walk
+    yield from _walk(new_path, topdown, onerror, followlinks)
+  File "/usr/lib/python3.10/os.py", line 419, in _walk
+    yield from _walk(new_path, topdown, onerror, followlinks)
+  File "/usr/lib/python3.10/os.py", line 419, in _walk
+    yield from _walk(new_path, topdown, onerror, followlinks)
+  [Previous line repeated 5 more times]
+  File "/usr/lib/python3.10/os.py", line 368, in _walk
+    entry = next(scandir_it)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/stack/cinder/.tox/.tox/lib/python3.10/site-packages/pyproject_api/_backend.py", line 95, in run
+    outcome = backend_proxy(parsed_message["cmd"], **parsed_message["kwargs"])
+  File "/opt/stack/cinder/.tox/.tox/lib/python3.10/site-packages/pyproject_api/_backend.py", line 36, in __call__
+    return getattr(on_object, name)(*args, **kwargs)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/build_meta.py", line 453, in build_editable
+    return self._build_with_temp_dir(
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/build_meta.py", line 397, in _build_with_temp_dir
+    self.run_setup()
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/build_meta.py", line 497, in run_setup
+    super().run_setup(setup_script=setup_script)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/build_meta.py", line 313, in run_setup
+    exec(code, locals())
+  File "<string>", line 18, in <module>
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+    return distutils.core.setup(**attrs)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 184, in setup
+    return run_commands(dist)
+  File "/opt/stack/cinder/.tox/.pkg/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+    raise SystemExit("interrupted")
+SystemExit: interrupted
+Backend: run command build_editable with args {'wheel_directory': '/opt/stack/cinder/.tox/.pkg/dist', 'config_settings': None, 'metadata_directory': None}
+[pbr] Generating ChangeLog
+running editable_wheel
+creating /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info
+writing pbr to /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/pbr.json
+writing /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/PKG-INFO
+writing dependency_links to /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/dependency_links.txt
+writing entry points to /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/entry_points.txt
+writing requirements to /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/requires.txt
+writing top-level names to /opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/top_level.txt
+[pbr] Processing SOURCES.txt
+writing manifest file '/opt/stack/cinder/.tox/.pkg/dist/.tmp-vn05uumc/cinder.egg-info/SOURCES.txt'
+[pbr] In git context, generating filelist from git
+Backend: Wrote response {'code': 'interrupted', 'exc_type': 'SystemExit', 'exc_msg': 'interrupted'} to /tmp/pep517_build_editable-jz9muudv.json
+.pkg: interrupt tox environment: .pkg
+interrupted
+  cover: FAIL code interrupted (5.98 seconds)
+  evaluation failed :( (7.35 seconds)
+ERROR: got KeyboardInterrupt signal
